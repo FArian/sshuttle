@@ -79,6 +79,8 @@ sudo sshuttle --dns -r [username]@[SSH_server]:1983 0/0 -X [your-ip]
 ```
 Please note that the commands and options mentioned above are specific to the installation and usage of SSHuttle on the server side.
 ## Server Side Configuration for udpgw
+[See youtube Tutoral (Persian language)](https://www.youtube.com/watch?v=52lTdyu7i6c)
+
 1. Download and install `badvpn-udpgw`:
 ```plaintext
 sudo wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/daybreakersx/premscript/master/badvpn-udpgw64"
