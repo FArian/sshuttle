@@ -1,7 +1,10 @@
-# SSHuttle over SSH
-where transparent proxy meets VPN meets ssh
-
-## Install SSHD Server side
+# VPN over SSH – sshuttle
+sshuttle is a powerful program that enables you to establish a VPN connection from your local machine to a remote server accessible via SSH. This connection creates a tunnel through which all your traffic, including DNS requests, can be routed from your client machine to the remote server. Essentially, sshuttle acts as a proxy server on your client machine, forwarding all traffic through an SSH tunnel. Being open-source, sshuttle offers numerous advantages over conventional VPN solutions, making it a versatile and attractive option for secure networking.
+[For more info visit this website](https://terminalbytes.com/sshuttle-vpn-over-ssh-vpn-alternative)
+```plaintext
+https://terminalbytes.com/sshuttle-vpn-over-ssh-vpn-alternative/
+```
+## Install an SSHD server on your server-side
 *(debian family distributions with apt packet manager)*
 ```plaintext
 sudo apt update
@@ -60,12 +63,13 @@ If you have another SSH port, such as `1980`:
 ```plaintext
 ssh -D 0.0.0.0:1080 -p 1980 [username]@[SSH_server]
 ```
-3. Run SSHuttle with DNS and specific subnet:
+## Example
+- Run SSHuttle with DNS and specific subnet:
 ```plaintext
 sudo sshuttle --dns -r [username]@[SSH_server]:1983 192.168.0.0/16
 ```
 Or run
-SSHuttle with DNS and all subnets:
+- SSHuttle with DNS and all subnets:
 ```plaintext
 sudo sshuttle --dns -r [username]@[SSH_server]:1983 0/0
 ```
